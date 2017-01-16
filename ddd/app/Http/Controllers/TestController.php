@@ -10,9 +10,5 @@ class TestController extends Controller
     {
     	$url = route('test');
     	print_r($url);
-    	$url = action('TestController@test');
-    	print_r($url);
-    	$action = Route::currentRouteAction();
-    	print_r($action);
     }
 }
