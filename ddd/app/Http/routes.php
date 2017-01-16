@@ -11,9 +11,9 @@
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
 // Route::get('/yy',function(){
 // 	return 'yy123';
@@ -29,13 +29,13 @@
 // 	return 'match route';
 // });
 
-Route::any('/test',function(){
-	return 'test hello world';
-});
+// Route::any('/test',function(){
+// 	return 'test hello world';
+// });
 
-Route::get('user/{id}/{name}',function($id,$name){
-	return $id."-".$name;
-});
+// Route::get('user/{id}/{name}',function($id,$name){
+// 	return $id."-".$name;
+// });
 // Route::get('user/{name?}',function($name='john'){
 // 	return $name;
 // });
@@ -47,6 +47,9 @@ Route::get('user/{id}/{name}',function($id,$name){
 // 	return $id;
 // })->where('id','[0-9]+');
 
-Route::get('user/{id}/{name}',function($id,$name){
-	return $id.'   '.$name;
-})->where(['id'=>'[0-9]+','name'=>'[A-Za-z]+']);
+// Route::get('user/{id}/{name}',function($id,$name){
+// 	return $id.'   '.$name;
+// })->where(['id'=>'[0-9]+','name'=>'[A-Za-z]+']);
+
+// Route::get('test','TestController@test');
+Route::get('test123', ['uses' => 'TestController@test','as'=>'test']);
